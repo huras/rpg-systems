@@ -4,4 +4,4 @@ let City = class {
     }
 }
 
-export {City};
+module.exports = City;
