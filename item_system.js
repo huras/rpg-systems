@@ -10,3 +10,5 @@ let Item = class{
         this.type = type;
     }
 }
+
+module.exports = items, Item;
