@@ -1,5 +1,0 @@
-let Skill = class {
-    constructor(){
-        
-    }
-}
