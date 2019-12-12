@@ -4,12 +4,20 @@ let Size = {
 };
 
 let City = class {
-  constructor(size) {
-    this.size = size;
+  constructor() {
+    this.houses = [];
     // console.log(size+' created');
   }
 
-  run() {}
+  setHouses(houses) {
+    this.houses = houses;
+  }
+
+  run() {
+    this.houses.map(item => {
+      item.run();
+    });
+  }
 };
 
 module.exports = { class: City, Size };

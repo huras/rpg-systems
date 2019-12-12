@@ -2,6 +2,9 @@ const World = require("./World");
 const Tile = require("./Tile");
 const City = require("./City");
 const Tree = require("./Tree");
+const House = require("./House");
+const Unit = require("./Unit");
+
 let getSavedGame = () => {
   let world = new World.class();
 
@@ -10,11 +13,19 @@ let getSavedGame = () => {
   tiles.push(tile);
   tile.setBiome(Tile.Biomes.Grassland);
 
-  let city = new City.class(City.Size.Village);
-  tile.addContent(city);
+  let village = new City.class();
+  let house1 = new House.class();
+  let house2 = new House.class();
+  let house3 = new House.class();
+  let houses = [house1, house2, house3];
+  village.setHouses(houses);
+  tile.addContent(village);
 
   let tree = new Tree.class(0, 0);
   tile.addFloraContent(tree);
+
+  let Mirela = new Unit.class();
+  tile.addContent(Mirela);
 
   let savedGame = {};
   savedGame.world = world;

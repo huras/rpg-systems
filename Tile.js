@@ -24,7 +24,7 @@ let Tile = class {
   }
 
   run() {
-    console.log("Tile run");
+    // console.log("Tile run");
     this.contents.map(item => {
       item.run();
     });

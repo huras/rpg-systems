@@ -6,7 +6,7 @@ const Tree = class {
   }
 
   run() {
-    console.log("A arvore balançou");
+    // console.log("A arvore balançou");
   }
 };
 
