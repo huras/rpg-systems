@@ -6,8 +6,8 @@ let Size = {
 let City = class {
     constructor(size){
         this.size = size;
-        console.log(size+' created');
+        // console.log(size+' created');
     }
 }
 
-module.exports = {City, Size};
+module.exports = {class: City, Size};
