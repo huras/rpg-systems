@@ -24,7 +24,7 @@ let getSavedGame = () => {
   let tree = new Tree.class(0, 0);
   tile.addFloraContent(tree);
 
-  let Mirela = new Unit.class();
+  let Mirela = new Unit.class("Mirela");
   tile.addContent(Mirela);
 
   let savedGame = {};
@@ -46,7 +46,7 @@ let main = async () => {
   let rounds = 0;
   while (1) {
     rounds++;
-    console.log("running round " + rounds);
+    // console.log("running round " + rounds);
     savedGame.world.run();
     await sleep(1000);
   }
