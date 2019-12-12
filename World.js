@@ -1,29 +1,17 @@
-const Tile = require('./Tile');
-const City = require('./City');
-const Tree = require('./Tree');
-let getSavedGame = () => {
-    
-    let savedGame = {tiles: []};
-
-    let tile = new Tile.class();
-    tile.setBiome(Tile.Biomes.Grassland);
-
-    let city = new City.class(City.Size.Village);
-    tile.addContent(city);
-
-    let tree = new Tree.class(0,0);
-    tile.addFloraContent(tree);
-
-    console.log(tile);
-
-    return savedGame;
-}
-
 let World = class {
-    constructor(){        
-        const savedGame = getSavedGame();
-    }
-}
+  constructor() {
+    this.tiles = [];
+  }
 
-let world = new World();
-module.exports = world;
+  setTiles(tiles) {
+    this.tiles = tiles;
+  }
+
+  run() {
+    this.tiles.map(item => {
+      item.run();
+    });
+  }
+};
+
+module.exports = { class: World };

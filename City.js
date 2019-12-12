@@ -1,13 +1,15 @@
 let Size = {
-    Village: '村',
-    Town: '町'
-}
+  Village: "村",
+  Town: "町"
+};
 
 let City = class {
-    constructor(size){
-        this.size = size;
-        // console.log(size+' created');
-    }
-}
+  constructor(size) {
+    this.size = size;
+    // console.log(size+' created');
+  }
 
-module.exports = {class: City, Size};
+  run() {}
+};
+
+module.exports = { class: City, Size };
